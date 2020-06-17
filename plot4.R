@@ -11,7 +11,7 @@ sub <- NEI[NEI$SCC %in% codes,]
 
 final <- aggregate(sub$Emissions, by = list(Year = sub$year), FUN = sum)
 
-with(final, plot(Year, x, ylab = "PM2.5 Emissions (tons)", main = "PM25 Emissions from Coal Combustion",
+with(final, plot(Year, x, ylab = "PM2.5 Emissions (tons)", main = "PM2.5 Emissions from Coal Combustion",
                  pch = 19, col = "black"))
 dev.copy(png, "plot4.png")
 dev.off()
