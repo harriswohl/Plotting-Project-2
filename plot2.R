@@ -12,7 +12,7 @@ for(x in yearbaltimore){
         
         
 }
-plot(years, emissions, pch = 19, col = "#330066", 
+plot(years, emissions, type = "l", lwd = 3, col = "#330066", 
      main = "Baltimore PM2.5  Emissions", xlab = "Year",
      ylab = "Emissions (tons)")
 

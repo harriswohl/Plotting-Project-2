@@ -14,8 +14,7 @@ baltimore <- subset(baltimore, SCC %in% codes)
 final <- aggregate(baltimore$Emissions, by = list(Year = baltimore$year),
           FUN = sum)
 
-with(final, plot(Year, x, ylab = "Emissions (tons)", pch = 19, 
-                 col = "blue", main = "Vehicular PM2.5 Emissions in Baltimore City"))
+with(final, plot(Year, x, ylab = "Emissions (tons)", type = "l", lwd = "2", main = "Vehicular PM2.5 Emissions in Baltimore City"))
 
 dev.copy(png, "plot5.png")
 dev.off()

@@ -11,7 +11,7 @@ for(x in yearsplit){
 years <- c(1999, 2002, 2005, 2008)
 
 plot(years, emissions, main = "Total PM2.5 Emissions", xlab = "Year",
-     ylab = "Emissions (tons)", pch = 19, col = "dark green")
+     ylab = "Emissions (tons)", type = "l", lwd = 3, col = "dark green")
 
 dev.copy(png, "plot1.png")
 dev.off()

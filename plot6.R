@@ -19,7 +19,7 @@ final$City <- c(rep("LA",4), rep("Baltimore", 4))
 colnames(final) <- c("Year", "City", "Emissions")
 
 library(ggplot2)
-qplot(Year, Emissions, facets = .~City, data = final, asp = 1/1,
+qplot(Year, Emissions, facets = .~City, data = final, asp = 1/1, geom = "line",
       main = "Vehicular PM2.5 Emissions", ylab = "Emissions (tons)")
 
 

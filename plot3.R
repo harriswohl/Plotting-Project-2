@@ -10,8 +10,8 @@ new <- aggregate(baltimore$Emissions, by = list(Year = baltimore$year,
                         Type = baltimore$type), FUN = sum)
 colnames(new) <- c("Year", "Type", "Emissions")
 
-qplot(Year, Emissions, facets = .~Type, data = new, main = "Baltimore PM2.5 Emissions by Source Type",
-      ylab = "Emissions (tons)", asp = 1/1)
+ggplot(data = new, aes(Year, Emissions)) + geom_line(aes(color = Type), lwd = 1.5, data = new) + 
+        labs(y = "Emissions (tons)", title = "Baltimore PM2.5 Emissions by Source Type")
 
 dev.copy(png, "plot3.png")
 dev.off()
